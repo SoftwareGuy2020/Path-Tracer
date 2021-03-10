@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>  
+    div.padded {  
+      padding-top: 0px;  
+      padding-right: 100px;  
+      padding-bottom: 0.25in;  
+      padding-left: 100px;  
+    }  
+  </style> 
+<title>Your Name  |  CS 184</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+<br />
+<h1 align="middle">Assignment 3-2: PathTracer</h1>
+    <h2 align="middle">Travis Morrissey</h2>
+
+    <div class="padded">
+        <p></p>
+
+    <h2 align="middle">Part 1: Mirror and Glass Materials</h2>        
+    <div align="center">
+        <p>The below picture is after zero bounces. The only thing visible is the light source, this is because only rays that directly trace from the camera to the light source are shown, as these rays involve zero bounces between the light source and camera.</p>
+        <table style="width=100%">
+            <tr>
+                <td align="middle">
+                    <img src="images/spheres1.png" />
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            After one bounce, the walls, floor, and glass spheres are now visible. The spheres appear black and the only reflection is the light sourse. The scene looks this way, because all rays that bounce off one surface between the light source and camera are shown.
+            The sphere does not reflect any of the walls or other surfaces, because it would need at least one more bounce for that to happen.
+        </p>
+        <table style="width=100%">
+            <tr>
+                <td align="middle">
+                    <img src="images/spheres2.png" />
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            After two bounces, relections of the walls, floor and glass ball start to show in the left ball. The glass ball in the reflection is still black because it takes more than two bounces to reflect the surface refraction of it. The glass ball itself is now reflecting some light and refracting others.
+            It is darker due to the fact that only some of the rays are bouncing twice. The ceiling is now visible as well, as rays would have to travel from the light source, bounce off something other than the ceiling, and finally bounce off the ceiling before traveling to the camera.
+        </p>
+        <table style="width=100%">
+            <tr>
+                <td align="middle">
+                    <img src="images/spheres3.png" />
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            After 3 bounces, the ceiling is now visible in the reflection, as well as some of the glass refractions. More refracted rays are shown as well. There is a bright spot under the glass ball, as we now have enough bounces to go from the
+            light source -> glass ball surface -> other side of the glass ball -> floor -> camera.
+        </p>
+        <table style="width=100%">
+            <tr>
+                <td align="middle">
+                    <img src="images/spheres4.png" />
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            After 4 bounces, we have more of the glass surface being shown with refraction, and we now have some light being shown on the right wall from being bounced off the light on the floor of the glass ball.
+        </p>
+        <table style="width=100%">
+            <tr>
+                <td align="middle">
+                    <img src="images/spheres5.png" />
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            After 5 bounces, we continue to show more light overall and some of the high frequency noise is being removed.
+        </p>
+        <table style="width=100%">
+            <tr>
+                <td align="middle">
+                    <img src="images/spheres6.png" />
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            After 100 bounces, we continue to show more light overall, more high frequency noise continues to be removed, and the shadows are softer.
+        </p>
+        <table style="width=100%">
+            <tr>
+                <td align="middle">
+                    <img src="images/spheres7.png" />
+                </td>
+            </tr>
+        </table>
+
+   
+</body>
+</html>
+
+
+
+
